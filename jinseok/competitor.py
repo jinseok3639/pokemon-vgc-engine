@@ -1,17 +1,17 @@
 from vgc2.agent import BattlePolicy, SelectionPolicy, TeamBuildPolicy
 from vgc2.competition import Competitor
 
-from .battle import MasterBattlePolicy
-from .selection import MasterSelectionPolicy
-from .team_builder import MasterTeamBuildPolicy
+from .battle import JinseokBattlePolicy
+from .selection import JinseokSelectionPolicy
+from .team_builder import JinseokTeamBuildPolicy
 
-class ExampleCompetitor(Competitor):
+class JinseokCompetitor(Competitor):
 
-    def __init__(self, name: str = "VGC_Master_AI"):
+    def __init__(self, name: str = "jinseok"):
         self.__name = name
-        self.__battle_policy = MasterBattlePolicy()
-        self.__selection_policy = MasterSelectionPolicy()
-        self.__team_build_policy = MasterTeamBuildPolicy()
+        self.__battle_policy = JinseokBattlePolicy()
+        self.__selection_policy = JinseokSelectionPolicy()
+        self.__team_build_policy = JinseokTeamBuildPolicy()
 
     @property
     def battlepolicy(self) -> BattlePolicy | None:
